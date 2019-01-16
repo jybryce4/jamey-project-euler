@@ -1,20 +1,16 @@
-/*
- * Project Euler Problem 2 
- * @ http://projecteuler.net/problem=2
- * 
- * This program finds the sum of the even-valued
- * Fibonacci numbers under four million
- * 
- * Solution by Jamey Bryce
- */
+/* 
+* This file (and all other files that may be in this package)
+* are designed to assist in the testing and experimentation 
+* that may be required for the solutions to Project Euler
+*
+* Author: Jamey Bryce
+*
+*/ 
 
-package com.brycejamey.problem2;
+public class Debugger {
+    public static void public static void main(String[] args) {
 
-public class EvenFibo {
-
-    public static void main(String[] args) {
-        final int FOUR_MIL = 4000000;
-
+        //Trying to work out the logic for problem 2:
         int num1;
         int num2;
         int fibNum = 0;
@@ -31,7 +27,5 @@ public class EvenFibo {
         }
 
         System.out.println(sum);
-
     }
-
 }
