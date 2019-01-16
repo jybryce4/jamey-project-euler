@@ -1,8 +1,10 @@
-/* Project Euler Problem 1
+/* 
+* Project Euler Problem 1
 * This program finds the sum of all the multiples of 3 or 5 below 1000
+*
 * Solution by Jamey Bryce
 */
-package com.brycejamey.projecteuler;
+package com.brycejamey.problem1;
 
 public class Multiples35 {
     public static void main(String[] args) {
