@@ -13,24 +13,31 @@ package com.brycejamey.problem2;
 public class EvenFibo {
 
     public static void main(String[] args) {
-        final int FOUR_MIL = 4000000;
+        //FibbnoacciNumber fibo = new FibonacciNumber(n1, n2);
+
+        final int FOUR_MIL = 4000000; 
+
+        int fibNum = 1;
+        int sum = 0;
 
         int num1;
-        int num2;
-        int fibNum = 0;
+        int num2 = 0;
 
-        int sum = 0; // will hold the answer
-        while (fibNum < FOUR_MIL) {
-            num1 = fibNum;
-            num2 = num1 + 1;
+        for (int i = 0; i < 10; i++) {
+            num1 = ; //having some difficulties will proceed with other idea (FibonacciNumber.java)
+
+            System.out.println("Num1: " + num1); // "debugger"
+
+            num2 = fibNum++ - num1;
+
             fibNum = num1 + num2;
+            System.out.println("Fibo: " + fibNum); // "debugger"
 
             if (fibNum % 2 == 0) {
                 sum += fibNum;
+                System.out.println("Sum: " + sum);
             }
         }
-
-        System.out.println(sum);
 
     }
 
