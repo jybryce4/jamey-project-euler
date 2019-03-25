@@ -17,4 +17,8 @@ Planned languages:
 
 Problems currently solved:
 - Problem 1
+<<<<<<< HEAD
 - Problem 2
+=======
+- Problem 2
+>>>>>>> master
