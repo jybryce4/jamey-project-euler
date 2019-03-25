@@ -20,39 +20,30 @@ public class LargePrimeFactor {
      * and returns the largest prime factor of it.
      * 
      */
-    public static long findFactors(BigInteger n) {
-        Long number = n.longValue();
-        Long largestPrimeDivisor = (long) 0;
-        for (Long index = (long) 1; index < number; index++) {
-            if (number % index == 0 && isPrimeDivisor(number) && index > largestPrimeDivisor) {
-                largestPrimeDivisor = index;
+    public static long findFactors(long n) {
+        long number = n;
+        long largestPrimeDivisor = 0;
+
+        int count = 2;
+        while (count * count <= number) {
+            if (number % count == 0) {
+                number /= count;
+                largestPrimeDivisor = count;
+            } else {
+                count++;
             }
+        }
+        if (number > largestPrimeDivisor) {
+            largestPrimeDivisor = number;
         }
 
         return largestPrimeDivisor;
     }
 
-    // This method determines if the number is a factor
-    public static boolean isPrimeDivisor(Long n) {
-        Long size = (long) 0;
-        for (Long index = n; index > 0; index--) {
-            if (n % index == 0) {
-                size++;
-            }
-        }
-
-        if (size == 2) {
-            return true;
-        } else {
-            return false;
-        }
-
-    }
-
     public static void main(String[] args) {
         // Set-up
-        String NUM = "600851475143";
-        final BigInteger N = new BigInteger(NUM);
+        long N = 600851475143L;
+        // final BigInteger N = new BigInteger(NUM);
 
         System.out.println(findFactors(N));
     }
