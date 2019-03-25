@@ -16,13 +16,14 @@ public class LargePrimeFactor {
      * A composite number N can be represented as a product of its prime factors
      * General: N = p1 * p2 * p3 * ... pn-1 * pn, where n > 0 and n is an integer
      * 
-     * The method below takes a BigInteger as an argument and returns the largest
-     * prime factor of it.
+     * I want the LARGEST factor. The method below takes a BigInteger as an argument
+     * and returns the largest prime factor of it.
+     * 
      */
     public static long findFactors(BigInteger n) {
         Long number = n.longValue();
         Long largestPrimeDivisor = (long) 0;
-        for (Long index = (long) 0; index < number; index++) {
+        for (Long index = (long) 1; index < number; index++) {
             if (number % index == 0 && isPrimeDivisor(number) && index > largestPrimeDivisor) {
                 largestPrimeDivisor = index;
             }
@@ -31,6 +32,7 @@ public class LargePrimeFactor {
         return largestPrimeDivisor;
     }
 
+    // This method determines if the number is a factor
     public static boolean isPrimeDivisor(Long n) {
         Long size = (long) 0;
         for (Long index = n; index > 0; index--) {
@@ -49,7 +51,7 @@ public class LargePrimeFactor {
 
     public static void main(String[] args) {
         // Set-up
-        String NUM = "600851475143L";
+        String NUM = "600851475143";
         final BigInteger N = new BigInteger(NUM);
 
         System.out.println(findFactors(N));
