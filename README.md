@@ -16,5 +16,5 @@ Planned languages:
 - Ruby
 
 Problems currently solved:
- -Problem 1
+- Problem 1
 - Problem 2
