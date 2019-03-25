@@ -14,3 +14,7 @@ Planned languages:
 - C
 - C#
 - Ruby
+
+Problems currently solved:
+- Problem 1
+- Problem 2
