@@ -6,7 +6,6 @@ public class Multiples35 {
 		System.out.println(
 		    IntStream
 		        .range(0, 1000)
-		        .map(x -> x)
 		        .filter(x -> x % 3 == 0 || x % 5 == 0)
 		        .sum());
 	}
